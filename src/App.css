@@ -1,38 +1,186 @@
+body{
+  font-family: 'PT Sans', sans-serif;
+}
 .App {
+  display: flex;
+}
+.dishCont{
+  width: 80%;
+  line-height: 0.1;
+}
+.cartCont{
+  width: 20%;
+  background-color: #f6fbfb;
+  margin: 20px;
+  margin-top: 80px;
+  height: fit-content;
+}
+.EveryDish{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.everyDishCont{
+  padding: 2%;
+  flex-grow: 1;
+  flex-basis: 15%;
+  margin: 10px;
+display: flex;
+flex-direction: column;
+line-height: 0.1;
+}
+.time{
+  display: flex;
+  align-items: center;
+  
+}
+h2{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.icon{
+  margin-right: 8px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.img{
+  border-radius: 10px;
+ 
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.categoryCont{
+  display: flex;
+  justify-content: space-evenly;
+}
+.message{
+  margin-left: 20px;
+  font-size: 25px;
+  
+}
+.selectedCategory, .notSelectedCategory{
+  font-size: 20px;
+  font-weight: 900;
+  
+}
+.selectedCategory{
+  color: #C21010;
+  text-decoration: underline 2px solid #C21010;
+  cursor: pointer;
+  
+}
+.notSelectedCategory:hover{
+  color: #2c583a;
+  text-decoration: underline 2px solid #2c583a;
+  cursor: pointer;
+}
+.order{
+  text-align: center;
+  font-size: 30px;
+  
+}
+.cartItem{
+  display: flex;
+  justify-content: space-around;
+  
+  border-bottom: 1px solid ;
+}
+.position{
   display: flex;
   flex-direction: column;
+}
+.info{
+  display: flex;
+  flex-direction: column;
+}
+.topImg{
+  align-self: center;
+}
+.CartIitemImg{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.dishName{
+  font-size: 20px;
+  font-weight: 900;
+  color: #2c583a;
+}
+.priceCart{
+  font-weight: 900;
+  color: #2c583a;
+}
+.cart{
+  margin-left: 20px;
+  margin-top: 80px;
+}
+.header{
+  font-size: 80px;
+  font-family: 'Caveat', cursive;
+}
+.span{
+  font-size: 150px;
+  color: #2c583a;
+}
+.subHeader{
+  font-size: 50px;
+  color: #2c583a;
+  font-family: 'Caveat', cursive;
+  margin-left: 10px;
+}
+.changeQuantity{
+  margin: auto;
+}
+.quantityBtn{
+  padding: 5px;
+  margin: 5px;
+  width: 30px;
+  border-radius: 50%;
+  font-size: 20px;
+  border: none;
+  background-color:#daf0cf;
+}
+.quantityBtn:hover{
+  background-color: #2c583a;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.btn{
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #2c583a;
+  color: white;
+}
+.btn:hover{
+  background-color: white;
+  color: #2c583a;
+  border: 1px solid #2c583a;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media all and (max-width:768px){
+  .App {
+    display: flex;
+    flex-direction: column-reverse;
+  
   }
-  to {
-    transform: rotate(360deg);
+  .dishCont{
+    width: 90%;
+    line-height: 0.1;
+  }
+  .cartCont{
+    justify-content: center;
+    width: 90%;
+    margin-top: 0px;
+  }
+  .header{
+    font-size: 30px;
+  }
+  .span{
+    font-size: 40px;
+  }
+  .subHeader{
+    font-size: 30px;
+  }
+  .categoryCont{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
   }
 }
