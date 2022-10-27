@@ -3,12 +3,12 @@ import { removeItemFromCart } from "../../redux/cartSlice";
 import dataDishes from "../../Data/dataDishes";
 import remove from './remove.png'
 
-const CartItem = ({cartItem}) => {
+const CartItem = ({cartItem, index}) => {
 
     const dishes = dataDishes.find(item => item.id === cartItem.dishId)
     const dispatch = useDispatch()
     return(
-        <div className="cartItem">
+        <div className="cartItem" key={index}>
              <div className="CartIitemImg">
              <img className='img' src={`./${dishes.img}.jpg`} width="100" height="70"/>
              <span onClick ={() => dispatch(removeItemFromCart({cartItemId: cartItem.id}))}>

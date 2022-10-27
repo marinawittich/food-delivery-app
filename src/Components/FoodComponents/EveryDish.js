@@ -6,11 +6,11 @@ import ChangeQuantity from '../Cart/ChangeQuantity'
 import { addItemToCart } from '../../redux/cartSlice'
 import { useDispatch } from 'react-redux'
 
-const EveryDish = ({dish}) => {
+const EveryDish = ({dish, index}) => {
     const [quantity, setQuantity] =useState(1)
     const dispatch = useDispatch();
     return(
-        <div >
+        <div key={index}>
             <div className='everyDishCont'>
             <img className='img' src={`./${dish.img}.jpg`} width="300" height="250"/>
            

@@ -89,7 +89,7 @@ h2{
   flex-direction: column;
 }
 .topImg{
-  align-self: center;
+  align-items: center;
 }
 .CartIitemImg{
   display: flex;

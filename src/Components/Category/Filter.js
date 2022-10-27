@@ -3,11 +3,11 @@ import { changeSelectedCategory, FilteredCategory } from "../../redux/CategorySl
 
 
 
-const Filter = ({category}) => {
+const Filter = ({category, index}) => {
     const dispatch = useDispatch()
     const selectedCategory = useSelector(changeSelectedCategory)
     return(
-        <div className="filter">
+        <div className="filter" key={index}>
             <p onClick={() => {dispatch(FilteredCategory(category))}} className={selectedCategory === category ? 'selectedCategory' : 'notSelectedCategory'}>{category}</p>
         </div>
     )
